@@ -1,0 +1,18 @@
+name: astrmai
+display_name: astrmai 融合控制台
+desc: |-
+  把麦麦（MaiBot）的群聊人格引擎嵌进 AstrBot 的进程：一个 asyncio 循环、一条 NapCat 反向 WS、
+  逐条消息裁决归属（命令与插件接管的消息留在 AstrBot，其余交给麦麦），同一条消息不会被答两遍。
+  自带 Web 控制台（负载首屏 + 双脑状态 + 裁决流水 + AstrBot 功能面：provider/人格/对话历史/定时任务）。
+  注意：本插件不打包麦麦本体（市场 zip 上限 16MB），需自备 MaiBot v1.3.18 并在配置里给出路径；
+  插件不会替你 pip 安装任何依赖，缺什么会明确告诉你缺什么。整体按 AGPL-3.0-or-later 分发。
+version: 0.1.0
+author: astrmai
+repo: https://github.com/lango578/astrbot-plugin-astrmai
+astrbot_version: ">=4.29.0"
+license: AGPL-3.0-or-later
+tags:
+  - maibot
+  - fusion
+  - console
+  - qq

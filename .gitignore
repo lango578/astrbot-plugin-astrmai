@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+astrmai_state/
+data/
+e2e/
+secrets/
+*.log

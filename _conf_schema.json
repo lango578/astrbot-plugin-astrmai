@@ -1,0 +1,62 @@
+{
+  "mai_root": {
+    "description": "麦麦（MaiBot）本体目录（其下必须有 src/）",
+    "type": "string",
+    "value": "",
+    "hint": "留空则用 data/plugin_data/astrmai/MaiBot。本插件不打包麦麦：请 git clone -b v1.3.18 https://github.com/MaiM-with-u/MaiBot 到该目录，或填你已有副本的绝对路径。"
+  },
+  "account_id": {
+    "description": "机器人自己的 QQ 号",
+    "type": "string",
+    "value": "",
+    "hint": "用于 @ 与引用判定；留空就只能靠群聊自然对话那条路。"
+  },
+  "allowed_users": {
+    "description": "私聊硬白名单（逗号分隔的 QQ 号）",
+    "type": "string",
+    "value": "",
+    "hint": "非空时名单外的人发消息一律沉默；同时它也是 /mai 的管理员名单（两者都空 = /mai 不放行）。"
+  },
+  "groups": {
+    "description": "群号白名单（逗号分隔）",
+    "type": "string",
+    "value": "",
+    "hint": "留空且总开关开了 = 所有群都放行。"
+  },
+  "allow_groups": {
+    "description": "群聊总开关",
+    "type": "bool",
+    "value": false,
+    "hint": "默认关：群消息既不转发给麦麦也不抑制 AstrBot，避免你还没配置就在群里说话。"
+  },
+  "allow_private": {
+    "description": "私聊总开关",
+    "type": "bool",
+    "value": true,
+    "hint": "关掉后私聊一律沉默。"
+  },
+  "platform": {
+    "description": "平台标识",
+    "type": "string",
+    "value": "qq",
+    "hint": "目前只做了 QQ（aiocqhttp）这条路。"
+  },
+  "panel_enable": {
+    "description": "开启 astrmai 控制台",
+    "type": "bool",
+    "value": false,
+    "hint": "控制台是独立 Web 服务（默认只听 127.0.0.1:18124），初始口令 astrmai-init、登录即强制改密。"
+  },
+  "panel_host": {
+    "description": "控制台监听地址",
+    "type": "string",
+    "value": "127.0.0.1",
+    "hint": "非回环地址必须同时给 TLS 证书，否则面板拒绝启动。"
+  },
+  "panel_port": {
+    "description": "控制台端口",
+    "type": "int",
+    "value": 18124,
+    "hint": "被占用时面板会报错，但不会拖垮两个脑子。"
+  }
+}
